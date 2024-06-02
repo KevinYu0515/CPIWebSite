@@ -76,7 +76,7 @@ const handleSearch = async () => {
   buildGraph(data.value);
 };
 
-const baseurl = "http://localhost:7000";
+const baseurl = "https://licensing-wilson-efficiently-advances.trycloudflare.com";
 const FetchData = (searchItems) => {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
