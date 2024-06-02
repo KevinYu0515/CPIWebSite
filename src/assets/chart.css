@@ -1,0 +1,58 @@
+path {
+	stroke: DodgerBlue;
+	stroke-width: 1;
+	fill: none;
+}
+.axis {
+	font-size: 11px;
+	fill: gray;
+}
+
+.x.axis line {
+  stroke: lightgrey;
+}
+
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+
+.x.axis path {
+  stroke: #fafafa;
+}
+
+.y.axis line, .y.axis path {
+  fill: none;
+  stroke: lightgrey;
+}
+
+.tooltip {
+    text-anchor: middle;
+    font: 12px sans-serif;
+    opacity: 0;
+}
+
+circle:hover{
+    cursor: pointer;
+}
+
+#zoom_area {
+  cursor: move;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+  pointer-events: all;
+}
+
+.loading{
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.warning-text{
+  color: red;
+  font-size: 1rem;
+}
