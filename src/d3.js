@@ -1,4 +1,4 @@
-const margin = { top: 60, right: 40, bottom: 50, left: 60 };
+const margin = { top: 60, right: 100, bottom: 50, left: 100 };
 const w = 1080; // 寬
 const h = 300; // 高
 const LINE_TIME = 10000;
@@ -40,9 +40,9 @@ export const buildGraph = (dataset) => {
   const svg = d3
     .select("#graph")
     .append("svg")
-    .attr("width", w + margin.left + margin.right) //將左右補滿
-    .attr("height", h + margin.top + margin.bottom) //上下補滿
-    .append("g") //增加一個群組g
+    .attr("width", w + margin.left + margin.right)
+    .attr("height", h + margin.top + margin.bottom)
+    .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 
   
@@ -54,18 +54,17 @@ export const buildGraph = (dataset) => {
     .style("pointer-events", "all")
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
 
-  // 增加x軸線，tickSize是軸線的垂直高度，-h會往上拉高
   const xAxis = d3.axisBottom(xScale).tickSize(-h).tickFormat(formatTime).ticks(w / 100);
-  // SVG加入x軸線
+
   svg
     .append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + h + ")")
     .call(xAxis);
 
-  // 建立y軸線，4個刻度，數字在左
+
   const yAxisLeft = d3.axisLeft(yScale).ticks(4);
-  // SVG加入y軸線
+
   svg
     .append("g")
     .attr("class", "y axis")

@@ -1,8 +1,8 @@
 <script setup>
-import { ref, reactive, watch } from "vue";
 import { buildGraph } from "./d3.js";
 import VueDatePicker from '@vuepic/vue-datepicker';
 import BounceLoader from 'vue-spinner/src/BounceLoader.vue'
+import { ref, reactive, watch } from "vue";
 const minprice = ref(0);
 const maxprice = ref(1000);
 const date = ref(new Date());
@@ -11,6 +11,7 @@ const name = ref("LA1");
 const graph = ref();
 const loading = ref(false);
 const invalid = ref(true);
+const msg = ref("Test");
 const warning_text = reactive({
   "minPrice": null,
   "maxPrice": null,
@@ -76,7 +77,7 @@ const handleSearch = async () => {
   buildGraph(data.value);
 };
 
-const baseurl = "https://licensing-wilson-efficiently-advances.trycloudflare.com";
+const baseurl = "https://albums-cp-envelope-portion.trycloudflare.com";
 const FetchData = (searchItems) => {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
@@ -156,7 +157,7 @@ const FetchData = (searchItems) => {
             @click="handleSearch"
             id="submit"
             type="button"
-            class="btn btn-primary btn-lg"
+            class="btn btn-primary btn-lg button-39"
           >
             Search
           </button>

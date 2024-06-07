@@ -6,6 +6,5 @@ import '@vuepic/vue-datepicker/dist/main.css'
 import App from './App.vue';
 
 const app = createApp(App);
-
 app.component('VueDatePicker', VueDatePicker);
 app.mount('#app');
